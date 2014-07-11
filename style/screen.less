@@ -1,0 +1,308 @@
+/* ------------------------------------
+  CSS Stylesheet Área do Aluno
+  Author: Letícia Matos | leticiamatos.com | CERS - Complexo de Ensino Renato Saraiva
+------------------------------------ */ 
+
+/* =============================================================================
+   Variables
+========================================================================== */
+
+  /* Colors */
+  @cK:#111;
+  @cOrange: #F46A28;
+  @cC: #104471;
+  @cC2: #1C70B7; 
+
+
+  @cPurple:#573E98;  
+  @cPurple2:#3D276B;  
+  @cGreen:#0FBDAF;
+  @cGreen2:#198B81;
+  @cOrange2: #FCB02C;
+  @cGray:#999;
+  @cGray2:#555;
+  @cGray3:#A6B5BD;
+
+  @cTest:rgba(0,255,0,0.5);  
+  
+  /* Measures */
+  @width:980px;
+  .width_center{
+    width: @width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Fonts */
+  @fontRegular: 'Open Sans', sans-serif;
+  .fontRegular{
+    font-family: @fontRegular;
+  }
+  @fontTitle: 'Noto Serif', serif;
+  .fontTitle{
+    font-family: @fontTitle;
+    letter-spacing: 1px;
+  }
+
+/* =============================================================================
+   General
+========================================================================== */
+.radius3 (@radius: 3px){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
+.radius4 (@radius: 4px){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
+.radius6 (@radius: 5px){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
+.radius5top (@radius: 5px 5px 0 0){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
+.radius5bottom (@radius: 0 0 5px 5px){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
+.noRadius (@radius: none){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
+.transition (@transition:0.6s){
+  transition:@transition;
+  -moz-transition:@transition;
+  -webkit-transition:@transition;
+  -o-transition:@transition;
+  -ms-transition:@transition;
+}
+.noTransition (@transition:none){
+  transition:@transition;
+  -moz-transition:@transition;
+  -webkit-transition:@transition;
+  -o-transition:@transition;
+  -ms-transition:@transition;
+}
+.noOpacity{
+  opacity: 1 !important;
+}
+.shadow (@shadow: 3px 3px 2px rgba(0,0,0,0.3)){
+  box-shadow:@shadow !important;
+  -moz-box-shadow:@shadow !important;
+  -webkit-box-shadow:@shadow !important;
+  -o-box-shadow:@shadow !important;
+  -ms-box-shadow:@shadow !important;
+}
+.clear{
+  display: block; 
+  clear: both;
+}
+a{ 
+  color: @cC;
+  .transition;
+}
+a:hover{
+  text-decoration: none; 
+  opacity: 0.6;
+}
+.block_wpr{
+  width: 100%;
+  clear: both;
+  position: relative;
+}
+.block_cntt{
+  position: relative;
+  .width_center;
+}
+
+/* Interna */
+.header h1 a:hover{
+  opacity: 0.9;
+}
+.header{
+  h1{
+    a{
+      display: block;
+      margin-top: 25px;
+      position: relative;
+      left: -10px;
+    }
+  }
+  .naveg{
+    height: 140px;
+    text-align: right;
+    background: url(../img/naveg-bg.png) right top no-repeat;
+  }
+
+  .menu_student{
+    background: url(../img/nav_unlogged.png) top right no-repeat;
+    padding-right: 150px;
+    height: 55px;
+    position: relative;
+    right: -85px;
+    a{
+      display: inline-block;
+      margin-top: 5px;
+      margin-left: 20px;
+      padding: 10px 0;
+      color: #fff;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+
+  /* Primary Menu */
+  .menu{
+    a{
+      display: inline-block;
+      vertical-align: top;
+      text-transform: uppercase;
+      font-size: 15px;
+      margin-left: 10px;
+      margin-top: 5px;
+      padding: 10px 0;
+      .fontTitle;
+    }
+    .cart{
+      display: inline-block;
+      vertical-align: top;
+      background: url(../img/ico/cart.png) left 20px no-repeat;
+      position: relative;
+      padding-left: 50px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-left: 35px;
+      font-size: 14px;
+      color: @cC;
+      line-height: 18px;
+
+      .cart-link{
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .menu_social{
+    position: absolute;
+    right: 170px;
+    top: 100px;
+    a{
+      display: inline-block;
+      height: 25px;
+      width: 25px;
+      margin-left: 15px;
+      background-image: url(../img/ico/social_nav.png);
+    }
+    a.face{
+      background-position: 0 0;
+    }
+    a.twit{
+      background-position: -25px 0;
+    }
+    a.inst{
+      background-position: -50px 0;
+    }
+  }
+}
+
+/* Separators */
+.separator{
+  display: block;
+  clear: both;
+  height: 20px;
+}
+.separator.col4-4{
+  background:url(../img/separat-col4-4.png) top center no-repeat; 
+}
+
+/* Main Content */
+.main-content{
+  padding-top: 10px;
+  font-size: 13px;
+  .content-text{
+    padding-top: 10px;
+  }
+}
+
+
+
+
+/* Responsible Collumns */
+.col1-2,
+.col2-2,
+.col1-3,
+.col2-3,
+.col3-3,
+.col1-4,
+.col2-4,
+.col3-4,
+.col4-4{
+  display: block;
+  float: left;
+  padding-left: 1%;
+  padding-right: 1%;
+  vertical-align: top;
+  .transition;
+}
+
+
+/* Responsive layout */
+@media screen and (min-width: 0) and (max-width: 599px){}
+@media screen and (min-width: 600px) and (max-width: 980px){
+}
+@media screen and (min-width: 980px){
+  .col1-2,
+  .col2-4{
+    width: 48%;
+  }
+  .col1-4{
+    width: 23%;
+  }
+  .col3-4{
+    width: 73%;
+  }
+  .col1-3{
+    width: 31.3333%;
+  }
+  .col2-3{
+    width: 64.6666%;
+  }
+  .col2-2,
+  .col4-4,
+  .col3-3{
+    width: 98%;
+  }
+}
+
+/* Content */
+body{
+  font-size: 15px;
+  background:url(../img/z_lixo/02interna.jpg) top center;
+  .fontRegular;
+}
