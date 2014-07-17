@@ -68,6 +68,13 @@
   -o-border-radius:@radius !important;
   -ms-border-radius:@radius !important;
 }
+.radiusMax (@radius: 20px){
+  border-radius:@radius !important;
+  -moz-border-radius:@radius !important;
+  -webkit-border-radius:@radius !important;
+  -o-border-radius:@radius !important;
+  -ms-border-radius:@radius !important;
+}
 .radius5top (@radius: 5px 5px 0 0){
   border-radius:@radius !important;
   -moz-border-radius:@radius !important;
@@ -251,7 +258,6 @@ a:hover{
 
 /* Separators */
 .separator{
-  display: block;
   clear: both;
   height: 20px;
 }
@@ -283,7 +289,18 @@ a:hover{
 .search_wpr{
   position: relative;
   width: 100%;
-  height: 45px;
+  //height: 45px;
+  .col_cntt{
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    .txt{
+      font-size: 15px;
+    }
+    .btn{
+      width: 55px;
+    }
+  }
   .txt{
     display: block;
     background: @cC2;
@@ -308,7 +325,20 @@ a:hover{
     text-indent: -200px;
   }
 }
-aside{
+.more{
+  margin-top: 10px;
+  height: 40px;
+  line-height: 40px;
+  text-align: right;
+  color: #fff;
+  padding: 0 10px;
+  background: @cC2;
+  display: block;
+  font-size: 9px;
+  text-transform: uppercase;
+  .fontTitle;
+}
+.sidebar{
   .colunistas_wpr{
     background: #eee url(../img/separat-col1-4.png) no-repeat center 40px;
     margin-top: 15px;
@@ -348,19 +378,7 @@ aside{
   .colunista_item:hover{
     opacity: 0.4;
   }
-  .more{
-    margin-top: 10px;
-    height: 40px;
-    line-height: 40px;
-    text-align: right;
-    color: #fff;
-    padding: 0 10px;
-    background: @cC2;
-    display: block;
-    font-size: 9px;
-    text-transform: uppercase;
-    .fontTitle;
-  }
+
   .adv_wpr{
     margin-top: 20px;
   }
@@ -397,10 +415,11 @@ aside{
 /* Product List */
 .store_item,
 .book_item{
+  text-align: center;
   position: relative;
   padding-top: 20px;
-  opacity: 1;
-  .transition;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
 
   .thumb{
     width: 95%;
@@ -422,7 +441,7 @@ aside{
   .author{
     color: #aaa;
     font-size: 13px;
-    padding-bottom: 10px;
+    padding-top: 3px;
   }
   .old-price{
     display: inline-block;
@@ -437,9 +456,57 @@ aside{
     font-size: 20px;
     font-weight: 600;
   }
+  .cart_link{
+    padding: 8px 8px 8px 14%;
+    background: @cGreen url(../img/ico/cart02.png) left center no-repeat;
+    z-index: 5;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: @fontTitle;
+    display: block;
+    width: 29%;
+    font-size: 13px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 27.5%;
+    .radius4;
+  }
 }
+.store_item,
+.book_item{
+  .thumb,
+  .new_tag,
+  .title,
+  .author,
+  .old-price,
+  .price{
+    opacity: 1;
+    .transition;
+  }
+  .cart_link{
+    opacity: 0;
+    .transition;
+  }
+}
+.store_item:hover,
 .book_item:hover{
-  opacity: 0.5;
+  .thumb,
+  .new_tag,
+  .title,
+  .author,
+  .old-price,
+  .price{
+    opacity: 0.7;
+  }
+  .cart_link{
+    opacity: 1;
+  }
+}
+.store_item{
+  .old-price{
+    padding-top: 5px;
+  }
 }
 
 /* footer */
@@ -547,6 +614,110 @@ aside{
 /* Content */
 body{
   font-size: 15px;
-  background:url(../img/z_lixo/02interna.jpg) center top;
   .fontRegular;
 }
+
+/* Home */
+body.home{
+  //background:url(../img/z_lixo/01home.jpg) center top;
+
+  .block_01{
+
+  }
+  .slideshow_wpr{
+    position: relative;
+  }
+  .slideshow{
+    margin-top: 5px;
+    z-index: 2;
+    li a:hover{
+      opacity: 1;
+    }
+  }
+  #bt_prev_wpr,
+  #bt_next_wpr{
+    a{
+      display: block;
+      background-image: url(../img/ico/arrows.png);
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 160px;
+      z-index: 4;
+      font-size: 10px;
+      overflow: hidden;
+      text-indent: -200px;
+      .transition;
+    }
+  }
+  #bt_prev_wpr a{
+    left: 10px;
+  }
+  #bt_next_wpr a{
+    right: 10px;
+    background-position: right;
+  }
+  #bt_prev_wpr a:hover{
+    left: 0;
+  }
+  #bt_next_wpr a:hover{
+    right: 0;
+    background-position: right;
+  }
+  .colunistas_wpr{
+    margin-top: 5px;
+    padding-bottom: 40px;
+    position: relative;
+    .colunistas_list{
+      height: 282px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    .more{
+      width: 90%;
+      padding: 0 5%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  .search_wpr{
+    padding-bottom: 10px;
+  }
+  .book_list-wpr{
+    .book_list{
+      background:url(../img/separat-col3-4.png) top center no-repeat;
+    }
+    .block_title{
+      font-size: 20px;
+      height: 40px;
+    }
+    .book_item:nth-child(3n+1){
+      clear: both;
+    }
+  } 
+  .store_list_wpr{
+    .store_list{
+      background:url(../img/separat-col4-4.png) top center no-repeat;
+    }
+    .block_title{
+      height: 33px;
+    }
+  } 
+  .category_list{
+    background: #eee;
+    margin-top: 10px;
+    padding-top: 10px;
+    .category_item{
+      padding: 8px 20px;
+      color: @cC;
+      text-transform: uppercase;
+      line-height: 18px;
+      .fontTitle;
+    }
+  }
+  .adv_wpr{
+    margin-top: 10px;
+  }
+}
+
