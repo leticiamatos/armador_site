@@ -134,6 +134,24 @@ a:hover{
   position: relative;
   .width_center;
 }
+.link{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Form */
+.btn{
+  cursor: pointer;
+  border: none;
+  .fontRegular;
+}
+.txt{
+  border: none;
+  .fontRegular;
+}
 
 /* Interna */
 .header h1 a:hover{
@@ -250,8 +268,168 @@ a:hover{
   }
 }
 
+/* Siderbar */
+.search_wpr{
+  position: relative;
+  width: 100%;
+  height: 45px;
+  .txt{
+    display: block;
+    background: @cC2;
+    color: #fff;
+    height: 45px;
+    border:none;
+    text-indent: 15px;
+    font-size: 13px;
+    width: 100%;
+    padding: 0 !important;
+  }
+  .btn{
+    width: 35px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border:none;
+    background: url(../img/ico/search.png) no-repeat center center;
+    overflow: hidden;
+    text-indent: -200px;
+  }
+}
+aside{
+  .colunistas_wpr{
+    background: #eee url(../img/separat-col1-4.png) no-repeat center 40px;
+    margin-top: 15px;
+  }
+  .colunistas_list{
+    padding: 0 10px 10px;
+  }
+  .colunista_item{
+    padding-top: 20px;
+    overflow: hidden;
+    position: relative;
+    opacity: 1;
+    .transition;
 
+    .photo{
+      float: left;
+      display: block;
+      margin: 0 8px 8px 0;
+      width: 100px;
+    }
+    .date{
+      font-size: 10px;
+    }
+    h4{
+      color: @cC;
+      padding-top: 8px;
+      line-height: 16px;
+      font-size: 12px;
+      letter-spacing: 0 !important;
+      .fontTitle;
+    }
+    .author{
+      padding-top: 5px;
+      font-size: 11px;
+    }
+  }
+  .colunista_item:hover{
+    opacity: 0.4;
+  }
+  .more{
+    margin-top: 10px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    color: #fff;
+    padding: 0 10px;
+    background: @cC2;
+    display: block;
+    font-size: 9px;
+    text-transform: uppercase;
+    .fontTitle;
+  }
+  .adv_wpr{
+    margin-top: 20px;
+  }
 
+  .highlight_wpr{
+    text-align: center;
+    background: url(../img/separat-col1-4.png) no-repeat center 40px;
+  }
+  .book_list{
+    padding: 0 10px 10px;
+   }
+  .store_wpr{
+    margin-top: 10px;
+    background: url(../img/separat-col1-4.png) no-repeat center 40px;
+  }
+  .store_list{
+    padding: 0 10px 10px;
+    text-align: center;
+    .title{
+      padding-bottom: 10px;
+    }
+  }
+}
+.block_title{
+  color: @cC;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 14px;
+  height: 30px;
+  .fontTitle;
+  padding: 10px 10px 0;
+}
+
+/* Product List */
+.store_item,
+.book_item{
+  position: relative;
+  padding-top: 20px;
+  opacity: 1;
+  .transition;
+
+  .thumb{
+    width: 95%;
+    height: auto;
+  }
+  .new_tag{
+    position: absolute;
+    left: 0;
+    top: 10px;
+    display: block;
+  }
+  .title{
+    font-family: @fontTitle;
+    color: @cC;
+    font-size: 15px;
+    padding-top: 10px;
+    line-height: 17px;
+  }
+  .author{
+    color: #aaa;
+    font-size: 13px;
+    padding-bottom: 10px;
+  }
+  .old-price{
+    display: inline-block;
+    color: #aaa;
+    text-decoration: line-through;
+  }
+  .price{
+    display: inline-block;
+    padding-left: 25px;
+    background: url(../img/ico/dolar.png) left center no-repeat;
+    color: @cC;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+.book_item:hover{
+  opacity: 0.5;
+}
 
 /* Responsible Collumns */
 .col1-2,
@@ -303,6 +481,6 @@ a:hover{
 /* Content */
 body{
   font-size: 15px;
-  background:url(../img/z_lixo/02interna.jpg) top center;
+  background:url(../img/z_lixo/02interna.jpg) center -39px;
   .fontRegular;
 }
