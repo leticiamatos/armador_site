@@ -120,6 +120,13 @@
   -o-box-shadow:@shadow !important;
   -ms-box-shadow:@shadow !important;
 }
+.shadowModal (@shadow: 1px 1px 10px rgba(0,0,0,0.3)){
+  box-shadow:@shadow !important;
+  -moz-box-shadow:@shadow !important;
+  -webkit-box-shadow:@shadow !important;
+  -o-box-shadow:@shadow !important;
+  -ms-box-shadow:@shadow !important;
+}
 .clear{
   display: block; 
   clear: both;
@@ -506,6 +513,63 @@ a:hover{
 .store_item{
   .old-price{
     padding-top: 5px;
+  }
+}
+
+/* Search box result */
+.search-result_wpr{
+  background:#fff;
+  height: 420px;
+  overflow-y: scroll;
+  position: absolute;
+  left: 0;
+  top: 45px;
+  z-index: 10;
+  padding-top: 10px;
+  .shadowModal;
+
+  .result_title{
+    height: 25px;
+    text-transform: uppercase;
+    color: @cC;
+    font-family: @fontTitle;
+    font-size: 13px;  
+  }
+  .book_list_wpr{
+    .book_list{
+      background: url(../img/separat-col2-4.png) top center no-repeat;
+    }
+  }
+  .store_item,
+  .book_item{
+    text-align: left;
+    .thumb{
+      float: left;
+      width: 90px;
+      margin: 0 20px 20px 0;
+    }
+    .new_tag{
+      width: 40px;
+    }
+  }
+  .category_list{
+    background: transparent url(../img/separat-col1-4.png) top center no-repeat !important;
+    font-size: 11px;
+    margin-top: 0 !important;
+    li{
+      padding: 2px 15px !important;
+    }
+  }
+  .post_list{
+    background: url(../img/separat-col1-4.png) top center no-repeat;
+    li{
+      padding: 10px 15px 10px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+  .store_list{
+    background: url(../img/separat-col1-4.png) top center no-repeat !important;
   }
 }
 
