@@ -24,14 +24,6 @@
   @cGray3:#A6B5BD;
 
   @cTest:rgba(0,255,0,0.5);  
-  
-  /* Measures */
-  @width:980px;
-  .width_center{
-    width: @width;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   /* Fonts */
   @fontRegular: 'Open Sans', sans-serif;
@@ -144,10 +136,6 @@ a:hover{
   clear: both;
   position: relative;
 }
-.block_cntt{
-  position: relative;
-  .width_center;
-}
 .link{
   position: absolute;
   top: 0;
@@ -172,7 +160,9 @@ a:hover{
   opacity: 0.9;
 }
 .header{
+  height: 160px;
   h1{
+    height: 140px;
     a{
       display: block;
       margin-top: 25px;
@@ -267,6 +257,7 @@ a:hover{
 .separator{
   clear: both;
   height: 20px;
+  float: none !important;
 }
 .separator.col4-4{
   background:url(../img/separat-col4-4.png) top center no-repeat; 
@@ -517,12 +508,16 @@ a:hover{
 }
 
 /* Search box result */
+.search_result_relative{
+  position: relative;
+}
 .search-result_wpr{
+  width: 100%;
   background:#fff;
   height: 420px;
   overflow-y: scroll;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 45px;
   z-index: 10;
   padding-top: 10px;
@@ -628,6 +623,12 @@ a:hover{
   }
 }
 
+.block_cntt{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Responsible Collumns */
 .col1-2,
 .col2-2,
@@ -650,8 +651,87 @@ a:hover{
 /* Responsive layout */
 @media screen and (min-width: 0) and (max-width: 599px){}
 @media screen and (min-width: 600px) and (max-width: 980px){
+
+  /* Measures */
+  .block_cntt{
+    width: 700px;
+  }
+
+  .col1-2,
+  .col2-4{
+    width: 48%;
+  }
+  .col1-4{
+    width: 48%;
+  }
+  .col3-4{
+    width: 98%;
+  }
+  .col1-3{
+    width: 48%;
+  }
+  .col2-3{
+    width: 98%;
+  }
+  .col2-2,
+  .col4-4,
+  .col3-3{
+    width: 98%;
+  }
+
+  .home{
+    .home_sidebar,
+    .sidebar{
+      display: none;
+    }
+    .book_list-wpr{
+      .book_item:nth-child(2n+1){
+        clear: both;
+      }
+    }
+  }
+  .sidebar{
+    display: none;
+  }
+  .header{
+    .naveg{
+      position: absolute;
+      top: 0;
+    }
+    h1 img{
+      margin-top: 20px;
+      width: 190px;
+    }
+    .menu a{
+      font-size: 12px;
+      letter-spacing: 0 !important; 
+    }
+  }
+  .footer{
+    .logo{
+      margin-top: 40px;
+      
+      img{
+        width: 100px;
+      }
+    }
+    .footer-naveg .menu,
+    .newsletter_wpr{
+      display: none;
+    }
+    .copy{
+      font-size: 10px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
 }
 @media screen and (min-width: 980px){
+
+  /* Measures */
+  .block_cntt{
+    width: 980px;
+  }
   .col1-2,
   .col2-4{
     width: 48%;
@@ -673,6 +753,13 @@ a:hover{
   .col3-3{
     width: 98%;
   }
+  .home{
+    .book_list-wpr{
+      .book_item:nth-child(3n+1){
+        clear: both;
+      }
+    }
+  }
 }
 
 /* Content */
@@ -683,7 +770,7 @@ body{
 
 /* Home */
 body.home{
-  //background:url(../img/z_lixo/01home.jpg) center top;
+  background: url(../img/home-block01-bg.png) repeat-x center 154px ;
 
   .block_01{
 
@@ -755,9 +842,6 @@ body.home{
     .block_title{
       font-size: 20px;
       height: 40px;
-    }
-    .book_item:nth-child(3n+1){
-      clear: both;
     }
   } 
   .store_list_wpr{
