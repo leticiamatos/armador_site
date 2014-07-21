@@ -12,7 +12,8 @@
   @cOrange: #F46A28;
   @cC: #104471;
   @cC2: #1C70B7; 
-  @cGreen:#128B6C;
+  @cGreen: #128B6C;
+  @cR: #B22D00;
 
 
   @cPurple:#573E98;  
@@ -1010,4 +1011,96 @@ body.view{
   .more_products{
     clear: both;
   }
+}
+.price_box{
+  background: url(../img/cart_box_bg.png) bottom center repeat-x;
+  padding: 10px;
+  text-align: center;
+  .old_price{
+    font-size: 13px;
+    color: #999;
+    text-decoration: line-through;
+    display: block;
+    padding-top: 10px;
+  }
+  .price{
+    display: inline-block;
+    font-size: 25px;
+    color: @cC;
+    padding-left: 25px;
+    background:url(../img/ico/dolar.png) left 3px no-repeat;
+    margin-top: 10px;
+  }
+  .cep_01,
+  .cep_02,
+  .cep_03{
+    display: inline-block;
+  }
+  .cep_01{
+    margin-top: 20px;
+    color: #999;
+    width: 110px;
+    font-size: 12px;
+    text-align: left;
+  }
+  .cep_02{
+    text-align: right;
+    font-size: 12px;
+    width: 70px;
+  }
+  .cep_03{
+    padding-top: 7px;
+    height: 30px;
+    .txt, 
+    .btn{
+      float: left;
+      display: block;
+    }
+    .txt{
+      width: 155px;
+      height: 25px;
+      text-indent: 5px;
+      font-size: 12px;
+    }
+    .btn{
+      height: 25px;
+      background: @cC2 url(../img/ico/arrows4.png) center no-repeat;
+      width: 25px;
+      text-align: left;
+      text-indent: -200px;
+      overflow: hidden;
+    }
+  }
+  .cep_error{
+    display: block;
+    clear: both;
+    padding-left: 10px;
+    color: @cR;
+    text-align: left;
+    font-size: 12px;
+    font-style: italic;
+  }
+  .but_btn{
+    display: block;
+    clear: both;
+    height: 35px;
+    line-height: 35px;
+    background: @cGreen url(../img/ico/cart02.png) 10px center no-repeat;
+    margin: 5px 12px;
+    text-align: center;
+    text-indent: 10px;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+}
+.tegal_txt{
+  color: #999;
+  text-align: left;
+  font-size: 12px;
+  padding: 15px 10px;
+  display: block;
+  clear: both;
+  font-style: italic;
 }
