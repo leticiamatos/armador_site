@@ -12,11 +12,11 @@
   @cOrange: #F46A28;
   @cC: #104471;
   @cC2: #1C70B7; 
+  @cGreen:#128B6C;
 
 
   @cPurple:#573E98;  
   @cPurple2:#3D276B;  
-  @cGreen:#0FBDAF;
   @cGreen2:#198B81;
   @cOrange2: #FCB02C;
   @cGray:#999;
@@ -264,6 +264,9 @@ a:hover{
 }
 .separator.col3-4{
   background:url(../img/separat-col3-4.png) top center no-repeat; 
+  .separator.col4-4{
+    background:url(../img/separat-col3-4.png) top center no-repeat; 
+  }
 }
 
 /* Main Content */
@@ -423,7 +426,7 @@ a:hover{
   margin-bottom: 10px;
 
   .thumb{
-    width: 95%;
+    width: 90%;
     height: auto;
   }
   .new_tag{
@@ -880,17 +883,131 @@ body.about{
       display: block;
       height: 3px;
       background: #ccc;
-      margin-bottom: 20px;
       width: 100%;
     }
+  }
+  .video,
+  .about_general{
+    min-height: 285px;
+    padding-bottom: 20px;
+  }
+  .about_01,
+  .about_02,
+  .about_03{
+    padding-top: 20px;
+
     .block_title{
       padding-left: 0;
     }
   }
-  .about_general{
-    padding-bottom: 20px;
-    min-height: 285px;
+}
+
+/* Category */
+body.category{
+  .cat_banner{
+    margin-bottom: 10px;
+  }
+}
+.pagination{
+  text-align: center;
+  a{
+    display: inline-block;
+    color: @cC;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    .radius3;
+  }
+  a.active{
+    background:@cC;
+    color: #fff;
+  }
+  a.prev,
+  a.next{
+    background-image: url(../img/ico/arrows2.png);
+    //height: 10px;
+    width: 5px;
+  }
+  a.prev{
+    background-position: center left;
+  }
+  a.next{
+    background-position: center right;
   }
 }
 
-
+/* View */
+body.view{
+  .view_thumb{
+    display: block;
+    float: left;
+    width: 30%;
+    padding-right: 2%;
+    height: 700px;
+    //background: @cTest;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .book_descpt{
+    p{
+      padding-bottom: 20px;
+    }
+  }
+  .accordion{
+    width: 68%;
+    float: left;
+    margin-bottom: 20px;
+  }
+  .ui-accordion-header{
+    background: @cC2 url(../img/ico/arrows3.png) left top no-repeat;
+    height: 40px;
+    padding:0;
+    margin: 0;
+    line-height: 40px;
+    text-indent: 40px;
+    color: #fff;
+    font-family: @fontTitle;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    border-top: 1px solid #fff;
+  }
+  .ui-state-active{
+    background: @cC2 url(../img/ico/arrows3.png) left bottom no-repeat;
+  }
+  .ui-accordion-content{
+    background: url(../img/separat-col2-4.png) top center no-repeat;
+  }
+  .author_thumb{
+    clear: both;
+    padding-top: 5px;
+  }
+  .author_text{
+    margin-bottom: 15px;
+    strong{
+      font-family: @fontTitle;
+      color: @cC;
+      padding-bottom: 7px;
+      font-style: italic;
+      display: block;
+    }
+  }
+  .book_details{
+    li{
+      display: inline-block;
+    }
+    .label{
+      width: 120px;
+      font-weight: 600;
+      clear: both;
+    }
+    .text{
+      width: 220px;
+    }
+  }
+  .more_products{
+    clear: both;
+  }
+}
