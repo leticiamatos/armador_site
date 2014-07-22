@@ -243,22 +243,24 @@ a:hover{
     position: absolute;
     right: 170px;
     top: 100px;
-    a{
-      display: inline-block;
-      height: 25px;
-      width: 25px;
-      margin-left: 15px;
-      background-image: url(../img/ico/social_nav.png);
-    }
-    a.face{
-      background-position: 0 0;
-    }
-    a.twit{
-      background-position: -25px 0;
-    }
-    a.inst{
-      background-position: -50px 0;
-    }
+  }
+}
+.menu_social{
+  a{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    margin-left: 15px;
+    background-image: url(../img/ico/social_nav.png);
+  }
+  a.face{
+    background-position: 0 0;
+  }
+  a.twit{
+    background-position: -25px 0;
+  }
+  a.inst{
+    background-position: -50px 0;
   }
 }
 
@@ -273,9 +275,9 @@ a:hover{
 }
 .separator.col3-4{
   background:url(../img/separat-col3-4.png) top center no-repeat; 
-  .separator.col4-4{
-    background:url(../img/separat-col3-4.png) top center no-repeat; 
-  }
+}
+.col3-4 .separator.col4-4{
+  background:url(../img/separat-col3-4.png) top center no-repeat; 
 }
 
 /* Main Content */
@@ -925,6 +927,7 @@ body.category{
   }
 }
 .pagination{
+  clear: both;
   text-align: center;
   a{
     display: inline-block;
@@ -1122,6 +1125,8 @@ body.view{
 
 /* Colunistas / Post authors */
 body.bloggers{
+  //background: url(../img/z_lixo/08post.jpg) top center;
+
   .author_img,
   .colunista_item .photo{
     overflow: hidden;
@@ -1131,7 +1136,9 @@ body.bloggers{
     .radiusPhoto;
   }
   .author_link,
-  .colunista_item .name{
+  .colunista_item .name,
+  .author_about .name,
+  .post_item .name{
     color: @cC;
     font-family: @fontCursive;
   }
@@ -1142,48 +1149,52 @@ body.bloggers{
     min-height: 280px;
     margin-top: 5px;
     padding-top: 20px;
-  }
-  .author_col,
-  .post_highlight,
-  .post_list{
-    display: block;
-    float: left;
-    padding-left: 1%;
-    padding-right: 1%;
-    padding-bottom: 20px;
-  }
-  .author_col{
-    width: 16%;
-  }
-  .post_highlight{
-    width: 46%;
-  }
-  .post_list{
-    width: 32%;
-  }
-  .author_col,
-  .post_highlight,
-  .post_item{
-    opacity: 1;
-    .transition;
-  }
-  .author_col:hover,
-  .post_highlight:hover,
-  .post_item:hover{
-    opacity: 0.6;
-  }
 
-  .author_col{
-    position: relative;
-    .author_link{
+    .author_col,
+    .post_highlight,
+    .post_list{
       display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      padding-top: 110px;
-      text-align: center;
-      font-size: 20px;
-      line-height: 20px;
+      float: left;
+      padding-left: 1%;
+      padding-right: 1%;
+      padding-bottom: 20px;
+    }
+    .author_col{
+      width: 16%;
+    }
+    .post_highlight{
+      width: 46%;
+    }
+    .post_list{
+      width: 32%;
+    }
+    .author_col,
+    .post_highlight,
+    .post_item{
+      opacity: 1;
+      .transition;
+    }
+    .author_col:hover,
+    .post_highlight:hover,
+    .post_item:hover{
+      opacity: 0.6;
+    }
+
+    .author_col{
+      position: relative;
+      img{
+        width: 100%;
+      }
+      .author_link{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding-top: 110px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 20px;
+      }
     }
   }
   .post_highlight,
@@ -1208,12 +1219,112 @@ body.bloggers{
       line-height: 23px;
       padding-top: 5px;
     }
+    .col_1{
+      display: block;
+      float: left;
+      width: 49%;
+      padding-right: 2%;
+    }
+    .col_2{
+      width: 49%;
+      display: block;
+      float: left;
+    }
+    .text{
+      padding-top: 10px;
+    }
+    .separator{
+      margin-top: 20px;
+    }
   }
   .post_item{
     position: relative;
     margin-bottom: 15px;
     .date{ font-size: 11px;}
     .title{ font-size: 14px;}
+  }
+
+  // Colunista Blogger
+  .author_about{
+    padding-top: 10px;
+    .author_img{
+      float: left;
+      margin: 0 20px 20px 0; 
+    }
+    .name{
+      font-size: 20px;
+    }
+    .text{
+      padding-top: 10px;
+    }
+    .menu_social{
+      padding-top: 20px;
+      padding-left: 105px;
+      position: relative;
+    }
+  }
+  .author_post_list{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    clear: both;
+    .post_item{
+      margin-bottom: 30px;
+    }
+    .post_item:nth-child(3n+1){
+      clear: both;
+    }
+  }
+  .more_posts{
+    padding-top: 30px;
+    .author_img{
+      width: 80px;
+      height: 80px;
+      float: left;
+    }
+    .name{
+      position: absolute;
+      display: block;
+      text-align: center;
+      width: 80px;
+      top: 85px;
+      font-size: 15px;
+      line-height: 17px;
+    }
+    .date, 
+    .title{
+      padding-left: 90px;
+    }
+  }
+  .post_text{
+    padding-top: 15px;
+
+    .post_thumb{
+      float: left;
+      margin: 0 20px 20px 0;
+    }
+    .date{
+      font-size: 13px;
+    }
+    .title{
+      font-size: 26px;
+      line-height: 32px;
+      font-family: @fontTitle;
+      color: @cC;
+    }
+    .name{
+      color: #999;
+      font-style: italic;
+      font-size: 13px;
+      display: block;
+      padding-top: 10px;
+    }
+    .text{
+      padding-top: 10px;
+      padding-bottom: 30px;
+      p{
+        padding-bottom: 10px;
+      }
+    }
   }
 }
 .post_link{
