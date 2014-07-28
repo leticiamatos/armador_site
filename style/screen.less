@@ -128,6 +128,20 @@
   -o-box-shadow:@shadow !important;
   -ms-box-shadow:@shadow !important;
 }
+.txt_shadow_hover (@shadow: 1px 1px 15px rgba(0,0,0,0.3)){
+  box-shadow:@shadow !important;
+  -moz-box-shadow:@shadow !important;
+  -webkit-box-shadow:@shadow !important;
+  -o-box-shadow:@shadow !important;
+  -ms-box-shadow:@shadow !important;
+}
+.txt_shadow_error(@shadow: 1px 1px 15px rgba(100,0,0,0.5)){
+  box-shadow:@shadow !important;
+  -moz-box-shadow:@shadow !important;
+  -webkit-box-shadow:@shadow !important;
+  -o-box-shadow:@shadow !important;
+  -ms-box-shadow:@shadow !important;
+}
 .clear{
   display: block; 
   clear: both;
@@ -162,6 +176,22 @@ a:hover{
 .txt{
   border: none;
   .fontRegular;
+}
+.a_btn{
+  display: block;
+  background: @cC url(../img/ico/arrows4.png) center no-repeat;
+  width: 35px;
+  height: 35px;
+  float: left;
+}
+.aditional .col_02,
+.cep{
+  .txt{
+    display: block;
+    float: left;
+    clear: both;
+    width: 75% !important;
+  }
 }
 
 /* Interna */
@@ -1409,6 +1439,14 @@ form.style_01{
     font-size: 11px;
     text-transform: uppercase;
   }
+  textarea.txt:focus,
+  input.txt:focus{
+    .txt_shadow_hover;
+  }
+  textarea.txt.submit_error,
+  input.txt.submit_error{
+    .txt_shadow_error;
+  }
 }
 
 /* Private Policy */
@@ -1442,4 +1480,150 @@ body.policy{
       padding: 5px 0 5px 100px;
     }
   }
+}
+
+/* Login / Sign up */
+body.login{
+  .login_box,
+  .forgotpass_box,
+  .signup_box{
+    clear: both;
+    padding-bottom: 55px;
+    background: url(../img/separat-col3-4.png) center bottom no-repeat;
+    margin-bottom: 5px;
+
+    .block_title,
+    .page_title{
+      padding-bottom: 20px;
+      clear: both;
+    }
+    .btn{
+      height: 35px;
+    }
+  }
+  .login_box,
+  .forgotpass_box{
+    .form_div.submit{
+      padding-top: 27px;
+    }
+    .btn{
+      width: 50%;
+    }
+  }
+  .signup_box{
+    .btn{
+      width: 100%;
+    }   
+    .block_title{
+      padding: 30px 0 5px;
+    } 
+    .error{
+      padding-bottom: 10px;
+    }
+    .submit{
+      float: right;
+      padding-top: 5px;
+    }
+  }
+  .form_div.cpf,
+  .form_div.sex,
+  .form_div.repeatpassword,
+  .form_div.comp{
+    padding: 0;
+  }
+}
+
+form{
+  .form_div{
+    float: left;
+    display: block;
+    padding: 0 2% 5px 0;
+  }
+  .form_div:last-child{
+    padding: 0;
+  }
+  .formcol1-6{  width: 15%;}
+  .formcol2-6{  width: 32%;}
+  .formcol3-6{  width: 49%;}
+  .formcol4-6{  width: 66%;}
+  .error{
+    color: @cR;
+    display: block;
+    clear: both;
+    font-style:italic;
+    padding-top: 5px;
+  }
+}
+
+/* Carrinho */
+body.cart{
+  background: url(../img/z_lixo/12carrinho.jpg) center -180px no-repeat;
+
+  .content-text table{
+
+    td{
+      padding: 20px 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    tr{
+    }
+    .thumb img{
+      width: 110px;
+    }
+    .title{
+      font-family: @fontTitle;
+      font-size: 14px;
+      line-height: 16px;
+      padding-bottom: 5px;
+    }
+    .qtt{
+      text-align: center;
+      label{
+        color: #999;
+        font-size: 12px;
+        font-style: normal;
+        padding-bottom: 2px;
+      }
+      .txt{
+        width: 65px;
+        text-align: center;
+      }
+    }
+    .price{
+      width: 100px;
+      padding-top: 20px;
+      padding-left: 30px;
+      font-weight: bold;
+      color: @cC;
+      font-size: 14px;
+    }
+    .actions{
+      a{
+        display: block;
+        height: 30px;
+        width: 30px;
+        background: url(../img/ico/close.png) center no-repeat;
+      }
+    }
+  } 
+  .aditional{
+    padding: 20px 0;
+
+    ul{
+      clear: both;
+    }
+    .col_01,
+    .col_02,
+    .col_03{
+      width:100px;
+      display: block;
+      float: left;
+      padding-left:2%; 
+    }
+    .col_01{
+      background: @cTest;
+      width: 35%;
+      text-align: right;
+    }
+  } 
 }
