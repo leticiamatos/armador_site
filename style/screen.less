@@ -171,11 +171,19 @@ a:hover{
 .btn{
   cursor: pointer;
   border: none;
+  opacity: 1;
   .fontRegular;
+  .transition;
+}
+.btn:hover{
+  opacity: 0.6;
 }
 .txt{
   border: none;
   .fontRegular;
+}
+textarea{
+  resize:none;
 }
 .a_btn{
   display: block;
@@ -1557,7 +1565,6 @@ form{
 
 /* Carrinho */
 body.cart{
-  background: url(../img/z_lixo/12carrinho.jpg) center -180px no-repeat;
 
   .content-text table{
 
@@ -1607,7 +1614,6 @@ body.cart{
     }
   } 
   .aditional{
-    padding: 20px 0;
 
     ul{
       clear: both;
@@ -1621,9 +1627,54 @@ body.cart{
       padding-left:2%; 
     }
     .col_01{
-      background: @cTest;
       width: 35%;
       text-align: right;
+      color: @cC;
+      font-style: italic;
+      line-height: 35px;
+      height: 35px;
+      margin-bottom: 10px;
+      clear: both;
+    }
+    .col_02{
+      width: 37%;
+    }
+    .col_03{
+      line-height: 35px;
+      font-size: 14px;
+      font-weight: 300;
+      color: #777;
     }
   } 
+  .total_wpr{
+    float: right;
+    text-align: center;
+    padding-top: 5px;
+    .total{
+      font-size: 18px;
+      font-weight: 600;
+      color: @cC;
+      position: relative;
+      span{
+        font-size: 14px;
+        font-style: italic;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        font-weight: 300;
+      }
+    }
+    .btn{
+      background: @cGreen;
+      font-size: 13px;
+      height: 37px;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  .error{
+    padding-top: 15px;
+    text-align: left;
+  }
 }
