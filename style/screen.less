@@ -188,7 +188,7 @@ textarea{
 .a_btn{
   display: block;
   background: @cC url(../img/ico/arrows4.png) center no-repeat;
-  width: 35px;
+  width: 30px;
   height: 35px;
   float: left;
 }
@@ -214,6 +214,7 @@ textarea{
       display: block;
       margin-top: 25px;
       position: relative;
+      z-index: 5;
       left: -10px;
     }
   }
@@ -241,7 +242,25 @@ textarea{
   }
 
   /* Primary Menu */
+  .menu_link{
+    background: @cC2 url(../img/ico/menu.png) 80px center no-repeat;
+    font-family: @fontRegular !important;
+    text-indent: 15px;
+    color: #fff;
+    width: 110px;
+    text-transform: uppercase;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 27px;
+    text-align: left;
+    .radius3;
+  }
   .menu{
+    .menu_list{
+      display: inline-block;
+      .radius3;
+    }
     a{
       display: inline-block;
       vertical-align: top;
@@ -710,120 +729,6 @@ textarea{
 }
 
 
-/* Responsive layout */
-@media screen and (min-width: 0) and (max-width: 599px){}
-@media screen and (min-width: 600px) and (max-width: 980px){
-
-  /* Measures */
-  .block_cntt{
-    width: 700px;
-  }
-
-  .col1-2,
-  .col2-4{
-    width: 48%;
-  }
-  .col1-4{
-    width: 48%;
-  }
-  .col3-4{
-    width: 98%;
-  }
-  .col1-3{
-    width: 48%;
-  }
-  .col2-3{
-    width: 98%;
-  }
-  .col2-2,
-  .col4-4,
-  .col3-3{
-    width: 98%;
-  }
-
-  .home{
-    .home_sidebar,
-    .sidebar{
-      display: none;
-    }
-    .book_list-wpr{
-      .book_item:nth-child(2n+1){
-        clear: both;
-      }
-    }
-  }
-  .sidebar{
-    display: none;
-  }
-  .header{
-    .naveg{
-      position: absolute;
-      top: 0;
-    }
-    h1 img{
-      margin-top: 20px;
-      width: 190px;
-    }
-    .menu a{
-      font-size: 12px;
-      letter-spacing: 0 !important; 
-    }
-  }
-  .footer{
-    .logo{
-      margin-top: 40px;
-      
-      img{
-        width: 100px;
-      }
-    }
-    .footer-naveg .menu,
-    .newsletter_wpr{
-      display: none;
-    }
-    .copy{
-      font-size: 10px;
-      text-align: center;
-      margin-top: 40px;
-    }
-  }
-}
-@media screen and (min-width: 980px){
-
-  /* Measures */
-  .block_cntt{
-    width: 980px;
-  }
-  .col1-2,
-  .col2-4{
-    width: 48%;
-  }
-  .col1-4{
-    width: 23%;
-  }
-  .col3-4{
-    width: 73%;
-  }
-  .col1-3{
-    width: 31.3333%;
-  }
-  .col2-3{
-    width: 64.6666%;
-  }
-  .col2-2,
-  .col4-4,
-  .col3-3{
-    width: 98%;
-  }
-  .home{
-    .book_list-wpr{
-      .book_item:nth-child(3n+1){
-        clear: both;
-      }
-    }
-  }
-}
-
 /* Content */
 body{
   font-size: 15px;
@@ -1068,6 +973,12 @@ body.view{
     clear: both;
   }
 }
+.mobile_price_box{
+  width: 180px;
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
 .price_box{
   background: url(../img/cart_box_bg.png) bottom center repeat-x;
   padding: 10px;
@@ -1199,6 +1110,9 @@ body.bloggers{
     }
     .author_col{
       width: 16%;
+      img{
+        width: 100%;
+      }
     }
     .post_highlight{
       width: 46%;
@@ -1307,9 +1221,6 @@ body.bloggers{
     clear: both;
     .post_item{
       margin-bottom: 30px;
-    }
-    .post_item:nth-child(3n+1){
-      clear: both;
     }
   }
   .more_posts{
@@ -1677,4 +1588,9 @@ body.cart{
     padding-top: 15px;
     text-align: left;
   }
+}
+
+/* img */
+img.preview{
+  width: 100%;
 }
